@@ -17,8 +17,11 @@ public class Histogram {
 	
 	public static void main (String args[]) throws IOException
 	{
+		long start = System.currentTimeMillis();
 		Histogram hist = new Histogram();
 		hist.printHistogram(hist.reduce(hist.getNextCharacterFromFile(hist.getFile())));
+		long end = System.currentTimeMillis();
+		System.out.println(end-start);
 	}
 
 	/**
